@@ -1,0 +1,49 @@
+{
+
+    #############################
+    ## Commonly changed params ##
+    #############################
+
+    "experiment_name": "grid_search", # type: str, name of this experiment
+
+    "n_lags": 0, #[0, 2], # type: int
+
+    "n_max_lags": 8, # type: int, should match largest n_lags value (so all lags are evaluated on exact same data)
+
+    "l2_reg": 1e-3, #[1e-3, 0.0316227766], #[0.0001, 0.00031622776601683794, 0.001, 0.0031622776601683794, 0.01, 0.03162277660168379, 0.1, 0.31622776601683794, 1], # type: float
+
+    "rng_seed_model": 0, # type: int, help: control model initialization
+
+
+    ###################   
+    ## AE parameters ##
+    ###################
+
+    "model_class": "neural-labels", # type: str
+
+    # specify which AE to use (should match how you trained the AE)
+
+    "ae_experiment_name": "latent_search",
+
+    "ae_version": "best",
+
+    "ae_model_class": "ae", # class of AE, ae, vae, etc
+
+    "ae_model_type": "conv", # type of AE, linear or conv
+
+    "n_ae_latents": 9, # type: int
+
+    "ae_multisession": null, # type: int
+
+    ########################
+    ## Model Architecture ##
+    ########################
+
+    "model_type": "mlp", # type: str, currently mlp only option (mlp with 0 hidden layers is linear)
+
+    "n_hid_layers": [0], # type: int
+
+    "n_hid_units": [32], # type: int
+
+    "activation": "relu" # type: str, could be linear, relu, lrelu, sigmoid, tanh
+}
