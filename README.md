@@ -12,6 +12,7 @@ of how these hdf5 files are expected to be organized, you can refer to the
 
 
 For our purposes, we'll need the following data/files:
+
 - a .mj2 video of mouse behavior (for these experiments we expect a video of a mouse's eye)
 - a file containing the corresponding neural data (neurons x time) 
 - two files that contain indexes to line up video and neural data (2 x num_trials, where batch_idxs[0][i] indicates
